@@ -52,6 +52,7 @@ typedef struct print_ops
 
 prtOp *prtOp_init();
 
+/* Martin Above / Samie Below */
 
 int _printf(const char *format, ...);
 
