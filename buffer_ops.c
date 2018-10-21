@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <unistd.h>
+#include <stdio.h>
 
 /**
  * buf_size - get the size;
@@ -44,9 +46,10 @@ char *buf_content(buffer *buf)
 	if (!copy)
 		return (NULL);
 	i = 0;
-	while (i++ < buf->index)
+	while (i < buf->index)
 	{
 		copy[i] = buf->str[i];
+		i++;
 	}
 	copy[i] = '\0';
 	return (copy);
