@@ -26,7 +26,7 @@
  * struct buffer - structer for the write buffer.
  * @index - current index of the buffer.
  * @size - size of the buffer.
- * @buf - pointer to memory that contains the content for this buffer.
+ * @str - pointer to memory that contains the content for this buffer.
  */
 typedef struct
 {
