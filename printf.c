@@ -1,4 +1,7 @@
-int printf(const char *format, ...)
+#include <stdarg.h>
+#include "holberton.h"
+
+int _printf(const char *format, ...)
 {
 	int i;
 	va_list v_ls;
@@ -12,3 +15,4 @@ int printf(const char *format, ...)
 	}
 	return (buffer.index);
 }
+
