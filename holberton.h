@@ -1,7 +1,7 @@
 #ifndef _GLOBAL_DEFINITIONS_H
 #define _GLOBAL_DEFINITIONS_H
 
-#include "global_definition.h"
+#include "global_definitions.h"
 
 #endif
 
@@ -28,25 +28,25 @@
  * @size - size of the buffer.
  * @str - pointer to memory that contains the content for this buffer.
  */
-typedef struct
+typedef struct print_buffer
 {
 	size_t index;
 	size_t size;
 	char *str;
 } buffer;
 
-void buf_init(buffer *);
-void buf_custom(buffer *, size_t);
+buffer *buf_new();
+buffer *buf_custom(size_t);
 size_t buf_size(buffer *);
 size_t buf_index(buffer *);
 char *buf_content(buffer *);
 void buf_write(buffer *);
 void buf_end(buffer *);
 
-typedef struct
+typedef struct print_ops
 {
 	char *op;
-	int (*fn_int)(char *, struct buffer *);
+	int (*fn_int)(char *, buffer *);
 	void (*fn_void)(void *);
 } prtOp;
 
