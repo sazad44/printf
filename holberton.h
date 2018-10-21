@@ -5,6 +5,13 @@
 
 #endif
 
+#ifndef STDLIB_H
+#define STDLIB_H
+
+#include <stdlib.h>
+
+#endif
+
 #ifndef STDARG_H
 #define STDARG_H
 
@@ -23,18 +30,18 @@
  */
 typedef struct
 {
-	unsigned int index;
-	unsigned int size;
-	char *buf;
+	size_t index;
+	size_t size;
+	char *str;
 } buffer;
 
-void buf_init(struct buffer *buf);
-void buf_custom(struct buffer *buf, unsigned int size);
-int buf_size(struct buffer);
-int buf_index(struct buffer);
-char *buf_content(struct buffer);
-void buf_write(struct buffer);
-void buf_end(struct buffer *buf);
+void buf_init(buffer *);
+void buf_custom(buffer *, size_t);
+size_t buf_size(buffer *);
+size_t buf_index(buffer *);
+char *buf_content(buffer *);
+void buf_write(buffer *);
+void buf_end(buffer *);
 
 typedef struct
 {
