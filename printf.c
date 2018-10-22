@@ -1,9 +1,10 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
- * _printf - prints strings with formatting
- * @format: the format string input to write to buffer with flags
- * Return: the number of characters that gets written to buffer
+ * _printf - prints any string with certain flags for modification
+ * @format: the string of characters to write to buffer
+ * Return: an integer that counts how many writes to the buffer were made
  */
 int _printf(const char *format, ...)
 {

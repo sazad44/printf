@@ -53,8 +53,8 @@ void write_mod(buffer *buf, va_list v_ls)
 /**
  * write_int - write a int to the buffer
  * @buf: the buffer to write to
- * @v_ls: the list of parameters to refer to
- * Return: No Value
+ * @v_ls: the list of input paramters to the function
+ * Return: no Value
  */
 void write_int(buffer *buf, va_list v_ls)
 {
@@ -65,8 +65,8 @@ void write_int(buffer *buf, va_list v_ls)
 }
 
 /**
- * append_num - add number as string to buffer
- * @buf: the buffer to write to
+ * append_num - appends a number as an integer to the buffer
+ * @buf: the buf to write number characters to
  * @num: the number to write to the buffer
  * Return: No Value
  */
