@@ -38,7 +38,7 @@ buffer *buf_custom(size_t size_uint)
 	return (buf);
 }
 /**
- * but_end - frees up the buffer.
+ * buf_end - frees up the buffer.
  * @buf: pointer to a buffer
  */
 void buf_end(buffer *buf)
