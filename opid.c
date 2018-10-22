@@ -11,16 +11,12 @@
  */
 int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 {
-	int j, k;
+	int j, k, fin = 0;
 	prtOp oArray[] = {
-		{"c", write_char},
-		{"s", write_str},
-		{"%", write_mod},
-		{"d", write_int},
-		{"i", write_int},
-		{"h", NULL},
-		{" ", NULL},
-		{"x", NULL},
+		{"c", write_char}, {"s", write_str},
+		{"%", write_mod}, {"d", write_int},
+		{"i", write_int}, {"h", NULL},
+		{" ", NULL}, {"x", NULL},
 		{NULL, NULL}
 	};
 
@@ -32,12 +28,11 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 			{
 				/* this if/else block is temporary for testing*/
 				if (oArray[k].fn != NULL)
-				{
-					oArray[k].fn(buf, v_ls);
-					return (j + 1);
-				}
+					fin = oArray[k].fn(buf, v_ls);
 				else
 					break;
+				if (fin == 1)
+					return (j + 1);
 			}
 		}
 		if (oArray[k].op == NULL)
