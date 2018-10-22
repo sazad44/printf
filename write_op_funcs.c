@@ -61,7 +61,13 @@ void write_int(buffer *buf, va_list v_ls)
 	int num;
 
 	num = va_arg(v_ls, int);
-	if (num < 0)
+	if (num == 0)
+	{
+		buf->str[buf->index] = '0';
+		buf->index++;
+		return;
+	}
+	else if (num < 0)
 	{
 		buf->str[buf->index] = '-';
 		buf->index++;
