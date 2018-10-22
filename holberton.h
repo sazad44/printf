@@ -46,8 +46,7 @@ void buf_end(buffer *);
 typedef struct print_ops
 {
 	char *op;
-	int (*fn_int)(char *, buffer *);
-	void (*fn_void)(void *);
+	void (*fn)(buffer *, va_list);
 } prtOp;
 
 prtOp *prtOp_init();
@@ -56,4 +55,11 @@ prtOp *prtOp_init();
 
 int _printf(const char *format, ...);
 
+int opid(buffer *buf, va_list v_ls, const char *src, int src_i);
+
+void write_char(buffer *buf, va_list v_ls);
+
+void write_str(buffer *buf, va_list v_ls);
+
+void write_mod(buffer *buf, va_list v_ls);
 #endif

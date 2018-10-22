@@ -63,6 +63,5 @@ void buf_write(buffer *buf)
 {
 	if (!buf)
 		return;
-	write(1, buf->str, buf->index + 1);
+	write(1, buf->str, buf->index);
 }
-

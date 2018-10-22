@@ -1,24 +1,27 @@
+#include "holberton.h"
+#include <stdlib.h>
+
 int _printf(const char *format, ...)
 {
-	int i;
+	int i = 0;
 	va_list v_ls;
 
 	buffer *buf;
+	buf = buf_new();
+	if (buf == NULL)
+		exit(0);
 	va_start(v_ls, format);
 	while (format[i])
 	{
-		buffer.index += opid(buf, format, v_ls);
-		buffer.str[buffer.index] = format[i];
-		buffer.index++;
+		if (format[i] == '%')
+			i += opid(buf, v_ls, format, i);
+		buf->str[buf->index] = format[i];
+		buf->index++;
 		i++;
 	}
-	return (buffer.index);
+	buf_write(buf);
+	i = buf_index(buf);
+	buf_end(buf);
+	va_end(v_ls);
+	return (i);
 }
-
-int opid(buffer *buffer, char *format, va_list v_ls)
-{
-	if (format[*buffer.index] == '%')
-	{
-		for (; format[*buffer.index] < 'a' || format[*buffer.index] > 'z'; *buffer.index++)
-		{
-			

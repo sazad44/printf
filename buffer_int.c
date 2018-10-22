@@ -8,7 +8,7 @@
 buffer *buf_new()
 {
 	buffer *buf;
-	
+
 	buf = malloc(sizeof(buffer));
 	if (!buf)
 		return (NULL);
@@ -27,7 +27,7 @@ buffer *buf_new()
 buffer *buf_custom(size_t size_uint)
 {
 	buffer *buf;
-	
+
 	buf = malloc(sizeof(buffer));
 	if (!buf)
 		return (NULL);
