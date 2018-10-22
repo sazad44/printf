@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	va_list v_ls;
-
 	buffer *buf;
 
 	buf = buf_new();

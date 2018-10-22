@@ -39,7 +39,7 @@ void write_str(buffer *buf, va_list v_ls)
 /**
  * write_mod - write a modulus symbol
  * @buf: the buffer to write to
- * @v_ls: the list of arguments to the function
+ * @v_ls: the list of parameters that refers to ellipses
  * Return: No Value
  */
 void write_mod(buffer *buf, va_list v_ls)

@@ -23,10 +23,10 @@
 #define _HOLBERTON_H
 
 /**
- * struct buffer - structer for the write buffer.
- * @index - current index of the buffer.
- * @size - size of the buffer.
- * @str - pointer to memory that contains the content for this buffer.
+ * struct print_buffer - structer for the write buffer.
+ * @index: current index of the buffer.
+ * @size: size of the buffer.
+ * @str: pointer to memory that contains the content for this buffer.
  */
 typedef struct print_buffer
 {
@@ -43,6 +43,11 @@ char *buf_content(buffer *);
 void buf_write(buffer *);
 void buf_end(buffer *);
 
+/**
+ * struct print_ops - struct for the write operators.
+ * @op: hold a symbol that represents the operator.
+ * @fn: pointer function to the write functions.
+ */
 typedef struct print_ops
 {
 	char *op;

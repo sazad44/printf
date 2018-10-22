@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * buf_init - Function that create a buffer at a default size of 1024
  *
@@ -20,7 +20,7 @@ buffer *buf_new()
 }
 /**
  * buf_custom - Function that create a buffer at a custom
- * @size_uint
+ * @size_uint: the desired size of the custom buffer.
  *
  * Return: a pointer to a buffer
  */
@@ -38,7 +38,8 @@ buffer *buf_custom(size_t size_uint)
 	return (buf);
 }
 /**
- * but_end - frees up the buffer.
+ * buf_end - frees up the buffer.
+ * @buf: pointer to a buffer
  */
 void buf_end(buffer *buf)
 {
