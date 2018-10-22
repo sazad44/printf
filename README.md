@@ -9,4 +9,5 @@ You can also use issues tab if you prefer.
 # change log
 
 ## 0.0.1 - 2018-19-10
+- add Martin Branch
 - Git flow initialized to this project.
