@@ -8,13 +8,14 @@
  * @v_ls: list of arguments to function
  * Return: No Value
  */
-void write_char(buffer *buf, va_list v_ls)
+int write_char(buffer *buf, va_list v_ls)
 {
 	char v_temp = va_arg(v_ls, int);
 
 	buf->str[buf->index] = v_temp;
 	buf->index++;
 	buf->str[buf->index] = '\0';
+	return (1);
 }
 
 /**
@@ -23,7 +24,7 @@ void write_char(buffer *buf, va_list v_ls)
  * @v_ls: the list of arguments to access
  * Return: No Value
  */
-void write_str(buffer *buf, va_list v_ls)
+int write_str(buffer *buf, va_list v_ls)
 {
 	int i;
 	char *v_temp = va_arg(v_ls, char *);
@@ -34,6 +35,7 @@ void write_str(buffer *buf, va_list v_ls)
 		buf->index++;
 	}
 	buf->str[buf->index] = '\0';
+	return (1);
 }
 
 /**
@@ -42,12 +44,13 @@ void write_str(buffer *buf, va_list v_ls)
  * @v_ls: the list of parameters that refers to ellipses
  * Return: No Value
  */
-void write_mod(buffer *buf, va_list v_ls)
+int write_mod(buffer *buf, va_list v_ls)
 {
 	(void)v_ls;
 	buf->str[buf->index] = '%';
 	buf->index++;
 	buf->str[buf->index] = '\0';
+	return (1);
 }
 
 /**
@@ -56,7 +59,7 @@ void write_mod(buffer *buf, va_list v_ls)
  * @v_ls: the list of input paramters to the function
  * Return: no Value
  */
-void write_int(buffer *buf, va_list v_ls)
+int write_int(buffer *buf, va_list v_ls)
 {
 	int num;
 
@@ -65,7 +68,7 @@ void write_int(buffer *buf, va_list v_ls)
 	{
 		buf->str[buf->index] = '0';
 		buf->index++;
-		return;
+		return (1);
 	}
 	else if (num < 0)
 	{
@@ -74,6 +77,7 @@ void write_int(buffer *buf, va_list v_ls)
 		num = -num;
 	}
 	append_num(buf, num);
+	return (1);
 }
 
 /**
