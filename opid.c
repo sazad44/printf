@@ -8,6 +8,8 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 		{"c", write_char},
 		{"s", write_str},
 		{"%", write_mod},
+		{"d", write_int},
+		{"i", write_int},
 		{NULL, NULL}
 	};
 
