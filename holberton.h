@@ -51,12 +51,11 @@ void buf_end(buffer *);
 typedef struct print_ops
 {
 	char *op;
-	void (*fn)(buffer *, va_list);
+	int (*fn)(buffer *, va_list);
 } prtOp;
 
 prtOp *prtOp_init();
 
-void write_int(buffer *buf, va_list v_ls);
 void append_num(buffer *buf, int num);
 
 /* Martin Above / Samie Below */
@@ -65,13 +64,13 @@ int _printf(const char *format, ...);
 
 int opid(buffer *buf, va_list v_ls, const char *src, int src_i);
 
-void write_char(buffer *buf, va_list v_ls);
+int write_char(buffer *buf, va_list v_ls);
 
-void write_str(buffer *buf, va_list v_ls);
+int write_str(buffer *buf, va_list v_ls);
 
-void write_mod(buffer *buf, va_list v_ls);
+int write_mod(buffer *buf, va_list v_ls);
 
-void write_int(buffer *buf, va_list v_ls);
+int write_int(buffer *buf, va_list v_ls);
 
 char *itoc(int num, char *dest);
 #endif
