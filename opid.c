@@ -18,6 +18,9 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 		{"%", write_mod},
 		{"d", write_int},
 		{"i", write_int},
+		{"h", NULL},
+		{" ", NULL},
+		{"x", NULL},
 		{NULL, NULL}
 	};
 
@@ -27,10 +30,18 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 		{
 			if (src[j + src_i] == *(oArray[k].op))
 			{
-				oArray[k].fn(buf, v_ls);
-				return (j + 1);
+				/* this if/else block is temporary for testing*/
+				if (oArray[k].fn != NULL)
+				{
+					oArray[k].fn(buf, v_ls);
+					return (j + 1);
+				}
+				else
+					break;
 			}
 		}
+		if (oArray[k].op == NULL)
+			return (0);
 	}
 	return (j);
 }
