@@ -39,6 +39,7 @@ void write_str(buffer *buf, va_list v_ls)
 /**
  * write_mod - write a modulus symbol
  * @buf: the buffer to write to
+ * @v_ls: the list of parameters that refers to ellipses
  * Return: No Value
  */
 void write_mod(buffer *buf, va_list v_ls)
@@ -50,11 +51,12 @@ void write_mod(buffer *buf, va_list v_ls)
 }
 
 /**
- * write_int = write a int to the buffer
- * @buf - the buffer to write to
- * Return: no Value
+ * write_int - write a int to the buffer
+ * @buf: the buffer to write to
+ * @v_ls: the list of parameters to refer to
+ * Return: No Value
  */
-void write_int(buffer *buf , va_list v_ls)
+void write_int(buffer *buf, va_list v_ls)
 {
 	int num;
 
@@ -62,8 +64,14 @@ void write_int(buffer *buf , va_list v_ls)
 	append_num(buf, num);
 }
 
+/**
+ * append_num - add number as string to buffer
+ * @buf: the buffer to write to
+ * @num: the number to write to the buffer
+ * Return: No Value
+ */
 void append_num(buffer *buf, int num)
-{	
+{
 	if (num == 0)
 		return;
 	append_num(buf, num / 10);
