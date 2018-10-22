@@ -1,7 +1,7 @@
 #ifndef _GLOBAL_DEFINITIONS_H
 #define _GLOBAL_DEFINITIONS_H
 
-#include "global_definitions.h"
+/* #include "global_definitions.h" */
 
 #endif
 
@@ -56,7 +56,7 @@ typedef struct print_ops
 
 prtOp *prtOp_init();
 
-void append_num(buffer *buf, int num);
+void append_num(buffer *buf, unsigned int num);
 
 /* Martin Above / Samie Below */
 

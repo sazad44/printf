@@ -64,8 +64,10 @@ int write_mod(buffer *buf, va_list v_ls)
 int write_int(buffer *buf, va_list v_ls)
 {
 	int num;
+	unsigned int unum;
 
 	num = va_arg(v_ls, int);
+	unum = num;
 	if (num == 0)
 	{
 		buf->str[buf->index] = '0';
@@ -76,9 +78,9 @@ int write_int(buffer *buf, va_list v_ls)
 	{
 		buf->str[buf->index] = '-';
 		buf->index++;
-		num = -num;
+		unum = -num;
 	}
-	append_num(buf, num);
+	append_num(buf, unum);
 	return (1);
 }
 
@@ -88,7 +90,7 @@ int write_int(buffer *buf, va_list v_ls)
  * @num: the number to write to the buffer
  * Return: No Value
  */
-void append_num(buffer *buf, int num)
+void append_num(buffer *buf, unsigned int num)
 {
 	if (num == 0)
 		return;
