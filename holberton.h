@@ -51,6 +51,9 @@ typedef struct print_ops
 
 prtOp *prtOp_init();
 
+void write_int(buffer *buf, va_list v_ls);
+void append_num(buffer *buf, int num);
+
 /* Martin Above / Samie Below */
 
 int _printf(const char *format, ...);

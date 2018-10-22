@@ -48,3 +48,25 @@ void write_mod(buffer *buf, va_list v_ls)
 	buf->index++;
 	buf->str[buf->index] = '\0';
 }
+
+/**
+ * write_int = write a int to the buffer
+ * @buf - the buffer to write to
+ * Return: no Value
+ */
+void write_int(buffer *buf , va_list v_ls)
+{
+	int num;
+
+	num = va_arg(v_ls, int);
+	append_num(buf, num);
+}
+
+void append_num(buffer *buf, int num)
+{	
+	if (num == 0)
+		return;
+	append_num(buf, num / 10);
+	buf->str[buf->index] = (num % 10) + '0';
+	buf->index++;
+}
