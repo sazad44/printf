@@ -70,4 +70,8 @@ void write_char(buffer *buf, va_list v_ls);
 void write_str(buffer *buf, va_list v_ls);
 
 void write_mod(buffer *buf, va_list v_ls);
+
+void write_int(buffer *buf, va_list v_ls);
+
+char *itoc(int num, char *dest);
 #endif
