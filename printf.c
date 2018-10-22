@@ -14,7 +14,9 @@ int _printf(const char *format, ...)
 
 	buf = buf_new();
 	if (buf == NULL)
-		exit(0);
+		return (-1);
+	if (format == NULL)
+		return (-1);
 	va_start(v_ls, format);
 	while (format[i])
 	{

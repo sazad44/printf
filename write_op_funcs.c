@@ -29,6 +29,8 @@ int write_str(buffer *buf, va_list v_ls)
 	int i;
 	char *v_temp = va_arg(v_ls, char *);
 
+	if (v_temp == NULL)
+		v_temp = "(null)";
 	for (i = 0; v_temp[i]; i++)
 	{
 		buf->str[buf->index] = v_temp[i];
