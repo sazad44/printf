@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * buf_size - get the size;
