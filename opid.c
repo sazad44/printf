@@ -36,7 +36,11 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 			}
 		}
 		if (oArray[k].op == NULL)
-			return (0);
+		{
+			buf->str[buf->index] = src[src_i];
+			buf->index++;
+			return (1);
+		}
 	}
 	return (j);
 }
