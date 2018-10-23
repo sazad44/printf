@@ -27,8 +27,8 @@ int main(void)
 	j = printf("Let's try to printf a %s sentence %c.\n", "simple", '8');
 	_printf("%d %d\n", i, j);
 	printf("%d %d\n", i, j);
-	i = _printf("Let's try to printf a %\n sentence.\n");
-	j = printf("Let's try to printf a %\n sentence.\n");
+	i = _printf("Hello Moto %    h");
+	j = printf("Hello Moto %    h");
 	_printf("%d %d\n", i, j);
 	printf("%d %d\n", i, j);
 	i = _printf("Let's try to printf a %d sentence.\n", 50);
