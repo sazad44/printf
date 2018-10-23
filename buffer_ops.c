@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * buf_size - get the size;
@@ -71,7 +72,7 @@ void buf_write(buffer *buf)
  */
 void buf_wr(buffer *buf)
 {
-	if (!buf || (buf->index < buf->size))
+	if (!buf || (buf->index <= buf->size))
 		return;
 	buf_write(buf);
 	buf->index = 0;
