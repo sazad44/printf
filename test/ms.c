@@ -39,8 +39,8 @@ int main(void)
 	j = printf("Let's try to printf a %i sentence.\n", 50);
 	_printf("%d %d\n", i, j);
 	printf("%d %d\n", i, j);
-	i = _printf("Let's try to printf a %i \" sentence.\n", 50);
-	j = printf("Let's try to printf a %i \" sentence.\n", 50);
+	i = _printf("Let's try to printf a %i \"\' sentence.\n", 50);
+	j = printf("Let's try to printf a %i \"\' sentence.\n", 50);
 	_printf("%d %d\n", i, j);
 	printf("%d %d\n", i, j);
 	i = _printf("Let's try to printf: a [z[%bgs][%s]x] woof\n more [%c]sentence.\n", p, q);
@@ -67,5 +67,13 @@ int main(void)
 	j = printf("%c%c   hi  %bc%s    - - ***\n", q, q, p);
 	_printf("%d %d\n", i, j);
 	printf("%d %d\n", i , j);
+	i = printf("\n");
+	j = _printf("\n");
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i , j);
+	i = printf("abc%cfgh%s\n",q, p);
+	j = _printf("abc%cfgh%s\n",q, p);
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i , j);
 	return (0);
 }

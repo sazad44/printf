@@ -26,11 +26,15 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		buf->str[buf->index] = format[i];
-		buf->index++;
+		buf_inc(buf);
 		i++;
 	}
+
 	buf_write(buf);
-	i = buf_index(buf);
+	if (buf->overflow > buf->size )
+		i = buf->overflow;
+	else
+		i = buf_index(buf);
 	buf_end(buf);
 	va_end(v_ls);
 	return (i);
