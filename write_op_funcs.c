@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -14,7 +13,7 @@ int write_char(buffer *buf, va_list v_ls)
 
 	buf_wr(buf);
 	buf->str[buf->index] = v_temp;
-	buf->index++;
+	buf_inc(buf);
 	buf->str[buf->index] = '\0';
 	return (1);
 }
@@ -36,7 +35,7 @@ int write_str(buffer *buf, va_list v_ls)
 	{
 		buf_wr(buf);
 		buf->str[buf->index] = v_temp[i];
-		buf->index++;
+		buf_inc(buf);
 	}
 	buf->str[buf->index] = '\0';
 	return (1);
@@ -54,7 +53,7 @@ int write_mod(buffer *buf, va_list v_ls)
 
 	buf_wr(buf);
 	buf->str[buf->index] = '%';
-	buf->index++;
+	buf_inc(buf);
 	buf->str[buf->index] = '\0';
 	return (1);
 }
@@ -75,13 +74,13 @@ int write_int(buffer *buf, va_list v_ls)
 	if (num == 0)
 	{
 		buf->str[buf->index] = '0';
-		buf->index++;
+		buf_inc(buf);
 		return (1);
 	}
 	else if (num < 0)
 	{
 		buf->str[buf->index] = '-';
-		buf->index++;
+		buf_inc(buf);
 		unum = -num;
 	}
 
@@ -104,5 +103,5 @@ void append_num(buffer *buf, unsigned int num)
 	buf_wr(buf);
 	append_num(buf, num / 10);
 	buf->str[buf->index] = (num % 10) + '0';
-	buf->index++;
+	buf_inc(buf);
 }
