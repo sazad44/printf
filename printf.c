@@ -21,7 +21,10 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
+		{
 			i += opid(buf, v_ls, format, i);
+			continue;
+		}
 		buf->str[buf->index] = format[i];
 		buf->index++;
 		i++;
