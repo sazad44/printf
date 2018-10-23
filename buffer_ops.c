@@ -71,7 +71,7 @@ void buf_write(buffer *buf)
  */
 void buf_wr(buffer *buf)
 {
-	if (!buf)
+	if (!buf || (buf->index < buf->size))
 		return;
 	buf_write(buf);
 	buf->index = 0;

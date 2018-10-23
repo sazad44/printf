@@ -34,7 +34,7 @@ int write_str(buffer *buf, va_list v_ls)
 		v_temp = "(null)";
 	for (i = 0; v_temp[i]; i++)
 	{
-		buf_wr(buf);
+		buf_wr(buf); 
 		buf->str[buf->index] = v_temp[i];
 		buf->index++;
 	}
