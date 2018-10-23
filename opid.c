@@ -38,7 +38,7 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 		if (oArray[k].op == NULL)
 		{
 			buf->str[buf->index] = src[src_i];
-			buf->index++;
+			buf_inc(buf);
 			return (1);
 		}
 	}
