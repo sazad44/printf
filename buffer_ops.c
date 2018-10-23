@@ -64,3 +64,16 @@ void buf_write(buffer *buf)
 		return;
 	write(1, buf->str, buf->index);
 }
+
+/**
+ * buf_wr - write and rest the buffer
+ * @buf: pointer to the buffer
+ */
+void buf_wr(buffer *buf)
+{
+	if (!buf || (buf->index < buf->size))
+		return;
+	buf_write(buf);
+	buf->index = 0;
+	buf->str[0] = '\0';
+}

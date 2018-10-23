@@ -48,3 +48,5 @@ void buf_end(buffer *buf)
 	free(buf->str);
 	free(buf);
 }
+
+

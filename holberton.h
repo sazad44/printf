@@ -42,6 +42,7 @@ size_t buf_index(buffer *);
 char *buf_content(buffer *);
 void buf_write(buffer *);
 void buf_end(buffer *);
+void buf_wr(buffer *buf);
 
 /**
  * struct print_ops - struct for the write operators.
