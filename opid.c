@@ -11,7 +11,7 @@
  */
 int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 {
-	int j, k, fin = 0;
+	int b = 0, j, k, fin = 0;
 	prtOp oArray[] = {
 		{"c", write_char}, {"s", write_str},
 		{"%", write_mod}, {"d", write_int},
@@ -37,9 +37,13 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 		}
 		if (oArray[k].op == NULL && src[j + src_i])
 		{
-			buf->str[buf->index] = src[src_i];
-			buf_inc(buf);
-			return (1);
+			/* Addition that breaks delete for loop and return 1*/
+			for (;src[src_i + b] != '%' && src[src_i + b]; b++)
+			{
+				buf->str[buf->index] = src[src_i + b];
+				buf_inc(buf);
+			}
+			return (b - 1);
 		}
 	}
 	if (src[j + src_i] == '\0')
