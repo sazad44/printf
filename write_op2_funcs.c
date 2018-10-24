@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * write_bin - convert a digit to binary.
  * @buf: pointer to a buffer.
