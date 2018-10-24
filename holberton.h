@@ -62,6 +62,8 @@ prtOp *prtOp_init();
 
 void append_num(buffer *buf, unsigned int num);
 
+int write_bin(buffer *buf, va_list v_ls);
+
 /* Martin Above / Samie Below */
 
 int _printf(const char *format, ...);
