@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		buf->str[buf->index] = format[i];
-		buf_inc(buf);
+		buf_inc(buf);;
 		i++;
 	}
 	buf_write(buf);
