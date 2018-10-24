@@ -1,4 +1,3 @@
-#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
@@ -14,7 +13,7 @@ int main(void)
 	int i = 0, j = 0;
 	char *p = "hello";
 	char q = 'H';
-
+/*
 	i = _printf("Let's try to printf a simple sentence.\n");
 	j = printf("Let's try to printf a simple sentence.\n");
 	_printf("%d %d\n", i, j);
@@ -75,5 +74,33 @@ int main(void)
 	j = _printf("abc%cfgh%s\n",q, p);
 	printf("%d %d\n", i, j);
 	_printf("%d %d\n", i , j);
+	i = printf("[%%cc] [%sss]\n", p);
+	j = _printf("[%%cc] [%sss]\n", p);
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i , j);
+	i = printf("%%%  %s%d%%c %%%% %Ybs\n", p, 10, q, p);
+	j = _printf("%%%  %s%d%%c %%%% %Ybs\n", p, 10, q, p);
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i , j);
+	i = printf("%s\n", l_str, 10, q, p);
+	j = _printf("%s\n", l_str, 10, q, p);
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i , j);
+	i = printf("%d%   %\n", 50);
+	j = _printf("%d%   %\n", 50);
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i, j);
+	i = printf("%d%d%d\n", printf("%s", l_str), printf("%s", l_str), printf("%s", l_str));
+	j = _printf("%d%d%d\n", printf("%s", l_str), printf("%s", l_str), printf("%s", l_str));
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i, j);
+	i = printf("%d%c%d%%d\n", 130, 130, 50);
+	j = _printf("%d%c%d%%d\n", 130, 130, 50);
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i, j);*/
+	i = printf("%c %d %c %s %c\n", q, 50, q, NULL);
+	j = _printf("%c %d %c %s %c\n", q, 50, q, NULL);
+	printf("%d %d\n", i, j);
+	_printf("%d %d\n", i, j);
 	return (0);
 }
