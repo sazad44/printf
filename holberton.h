@@ -26,12 +26,14 @@
  * struct print_buffer - structer for the write buffer.
  * @index: current index of the buffer.
  * @size: size of the buffer.
+ * @overflow: this recoreds the overflow.
  * @str: pointer to memory that contains the content for this buffer.
  */
 typedef struct print_buffer
 {
 	size_t index;
 	size_t size;
+	size_t overflow;
 	char *str;
 } buffer;
 
@@ -42,7 +44,8 @@ size_t buf_index(buffer *);
 char *buf_content(buffer *);
 void buf_write(buffer *);
 void buf_end(buffer *);
-void buf_wr(buffer *buf);
+void buf_wr(buffer *);
+void buf_inc(buffer *);
 
 /**
  * struct print_ops - struct for the write operators.
