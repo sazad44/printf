@@ -11,6 +11,8 @@ int write_char(buffer *buf, va_list v_ls)
 {
 	char v_temp = va_arg(v_ls, int);
 
+	if (v_temp == 0)
+		v_temp = '\0';
 	buf_wr(buf);
 	buf->str[buf->index] = v_temp;
 	buf_inc(buf);
