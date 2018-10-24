@@ -17,6 +17,7 @@ int opid(buffer *buf, va_list v_ls, const char *src, int src_i)
 		{"%", write_mod}, {"d", write_int},
 		{"i", write_int}, {"h", NULL},
 		{" ", NULL}, {"x", NULL},
+		{"b", write_bin},
 		{NULL, NULL}
 	};
 
