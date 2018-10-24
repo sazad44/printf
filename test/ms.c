@@ -11,7 +11,6 @@
 int main(void)
 {
 	int i = 0, j = 0;
-	char *p = "hello";
 	char q = 'H';
 /*
 	i = _printf("Let's try to printf a simple sentence.\n");

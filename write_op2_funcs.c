@@ -26,7 +26,7 @@ int write_bin(buffer *buf, va_list v_ls)
 		i++;
 	}
 	while (i--)
-	{
+	{	buf_wr(buf);
 		buf->str[buf->index] = ar[i];
 		buf_inc(buf);
 	}
