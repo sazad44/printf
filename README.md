@@ -11,11 +11,11 @@ is a Low-Level Programming project writen in C language.
 |  [holberton.h](./holberton.c) |   | Header files for the the whole project. |
 | [global_definitions.h](./global-definitions.h) |  | Header file that defines macro for `NULL`, `True`, and `False`. |
 | [opid.c](./opid.c) | [📌](#opid-c) | Contains the functions for handling the function pointers. |
-| [buffer_int.c](./buffer_int.c) | [📌](#buffer-int-c) | Contains function to `Allocate` and `free` a `Buffer`. |
-| [buffer_ops.c](./buffer_ops.c) | [📌](#buffer-ops-c) | Contains functions related to the buffer. |
-| [buffer_ops2.c](./buffer_ops2.c) | [📌](#buffer-ops2-c) | Contains functions related to the buffer. |
-| [write_op_funcs.c](./write_op_funcs.c) | [📌](#write_op-funcs-c) | Contains functions related to writing out the `Buffer` to `STDOUT`. |
-| [write_op2_funcs.c](write_op2_funcs.c) | [📌](#write_op2-funcs-c) | Contains a function that converts binary into base 10 number. |
+| [buffer_int.c](./buffer_int.c) | [📌](#buffer_int-c) | Contains function to `Allocate` and `free` a `Buffer`. |
+| [buffer_ops.c](./buffer_ops.c) | [📌](#buffer_ops-c) | Contains functions related to the buffer. |
+| [buffer_ops2.c](./buffer_ops2.c) | [📌](#buffer_ops2-c) | Contains functions related to the buffer. |
+| [write_op_funcs.c](./write_op_funcs.c) | [📌](#write_op_funcs-c) | Contains functions related to writing out the `Buffer` to `STDOUT`. |
+| [write_op2_funcs.c](write_op2_funcs.c) | [📌](#write_op2_funcs-c) | Contains a function that converts binary into base 10 number. |
 
 
 
