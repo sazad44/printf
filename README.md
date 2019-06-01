@@ -3,6 +3,15 @@ Our first collaborative project at Holberton School, The printf project
 is a Low-Level Programming project writen in C language.
 
 
+## Table of Context
+<!-- toc -->
+
+- [Files](#Files)
+- [change log](#change-log)
+  * [0.0.1 - 2018-19-10](#001---2018-19-10)
+- [Authors](#Authors)
+
+<!-- tocstop -->
 # Files
 
 |   Files| OV | Desciption |
@@ -10,12 +19,12 @@ is a Low-Level Programming project writen in C language.
 | [printf.c](./printf.c) | [📌](#printf) | Entry point for the `printf`. |
 |  [holberton.h](./holberton.c) |   | Header files for the the whole project. |
 | [global_definitions.h](./global-definitions.h) |  | Header file that defines macro for `NULL`, `True`, and `False`. |
-| [opid.c](./opid.c) | [📌](#opid-c) | Contains the functions for handling the function pointers. |
-| [buffer_int.c](./buffer_int.c) | [📌](#buffer_int-c) | Contains function to `Allocate` and `free` a `Buffer`. |
-| [buffer_ops.c](./buffer_ops.c) | [📌](#buffer_ops-c) | Contains functions related to the buffer. |
-| [buffer_ops2.c](./buffer_ops2.c) | [📌](#buffer_ops2-c) | Contains functions related to the buffer. |
-| [write_op_funcs.c](./write_op_funcs.c) | [📌](#write_op_funcs-c) | Contains functions related to writing out the `Buffer` to `STDOUT`. |
-| [write_op2_funcs.c](write_op2_funcs.c) | [📌](#write_op2_funcs-c) | Contains a function that converts binary into base 10 number. |
+| [opid.c](./opid.c) | [📌](#opidc) | Contains the functions for handling the function pointers. |
+| [buffer_int.c](./buffer_int.c) | [📌](#buffer_intc) | Contains function to `Allocate` and `free` a `Buffer`. |
+| [buffer_ops.c](./buffer_ops.c) | [📌](#buffer_opsc) | Contains functions related to the buffer. |
+| [buffer_ops2.c](./buffer_ops2.c) | [📌](#buffer_ops2c) | Contains functions related to the buffer. |
+| [write_op_funcs.c](./write_op_funcs.c) | [📌](#write_op_funcsc) | Contains functions related to writing out the `Buffer` to `STDOUT`. |
+| [write_op2_funcs.c](write_op2_funcs.c) | [📌](#write_op2_funcsc) | Contains a function that converts binary into base 10 number. |
 
 
 
